@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Dice Roller</title>
+</head>
+<body>
+    <button id="rollDice">Roll Dice</button>
+    <div id="output"></div>
+    <script>
+        const button=document.getElementById('rollDice');
+        button.addEventListener("click", function(){
+            const diceRoll = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('output').textContent = diceRoll;
+        })
+    </script>
+</body>
+</html>
