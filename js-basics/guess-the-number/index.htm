@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess-the-number</title>
+</head>
+<body style="background-color: cornsilk;">
+<center>
+<h1 style="color: brown;">Guess the number</h1>
+<label for="number"><b>Enter a number:</b> </label>
+<br>  
+<input type="number" id="numberinput">
+<br><br>
+<button id="guessbutton">Guess</button>
+<h2><div id="output"></div></center> </h2>
+</center>
+
+<script>
+let randomNumber= Math.floor(Math.random()*100)+1;
+const button=document.getElementById('guessbutton');
+button.addEventListener('click', function(){
+    const numberInput=Number(document.getElementById('numberinput').value);
+    if(randomNumber==numberInput){
+    document.getElementById('output').textContent= 
+    "You guessed it right !!!!";
+    } else if(randomNumber<numberInput){
+    document.getElementById('output').textContent= 
+    "Too High..Try again";    
+    }else{
+        document.getElementById('output').textContent= 
+        "Too Low..Try again";}
+});
+
+
+</script>
+</body>
+</html>
